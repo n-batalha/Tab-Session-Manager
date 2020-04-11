@@ -1,14 +1,14 @@
 import React from "react";
 import browser from "webextension-polyfill";
 import browserInfo from "browser-info";
-import "../styles/donationMessage.scss";
+import "../styles/DonationMessage.scss";
 
 export default props => {
   const isChrome = browserInfo().name == "Chrome";
   const patreonUrl = "https://www.patreon.com/sienori";
   const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&no_shipping=1&business=sienori.firefox@gmail.com&item_name=Tab Session Manager ${
     isChrome ? "for Chrome " : ""
-  }- Donation`;
+    }- Donation`;
 
   return (
     <div className="donationMessage">
